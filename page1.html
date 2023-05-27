@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Storage</title>
+</head>
+<body>
+
+  <div class = "input">
+  <input id = "key" type="text">
+  <input id = "input" type="text">
+  </div>
+  <div class="button">
+  <button class = "add">ADD</button>
+  <button class = "delate">DELATE</button>
+  </div>
+
+  <script>
+    //localStorage.clear;
+    function add(){
+      var ID = Math.random() * 100;
+      var key = document.getElementById('key').value;
+      var valy = document.getElementById('input').value;
+      localStorage.setItem(key, valy);
+    }
+
+    function delate(){
+      localStorage.clear();
+    }
+
+    const addButton = document.querySelector('.add');
+    addButton.addEventListener('click', add);
+
+    const delateButton = document.querySelector('.delate');
+    delateButton.addEventListener('click', delate);
+
+    //var me = "hello? I already deen here";
+
+    //localStorage.setItem("me", me);
+    //localStorage.clear;
+
+  </script>
+  
+</body>
+</html>
